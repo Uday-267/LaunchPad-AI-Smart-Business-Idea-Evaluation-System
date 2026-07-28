@@ -119,7 +119,7 @@ This repository contains all project documents prepared during the software deve
 
 The complete application source code is included in the **Source code** directory.
 
-https://github.com/Ganesh01729/LaunchPadAI
+https://github.com/Uday-267/LaunchPad-AI-Smart-Business-Idea-Evaluation-System.git
 
 ---
 
