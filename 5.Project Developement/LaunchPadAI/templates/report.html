@@ -1,0 +1,267 @@
+{% extends "base.html" %}
+
+{% block title %}
+Startup Analysis Report
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- ========================= -->
+    <!-- Report Header -->
+    <!-- ========================= -->
+
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold">
+
+            📊 Startup Analysis Report
+
+        </h1>
+
+        <p class="text-muted">
+
+            AI Generated Business Intelligence using Google Gemini AI
+
+        </p>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- Startup Information -->
+    <!-- ========================= -->
+
+    <div class="card shadow-lg mb-4">
+
+        <div class="card-header bg-primary text-white">
+
+            <h4>
+
+                🚀 Startup Details
+
+            </h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <h6>Startup Name</h6>
+
+                    <p>{{ analysis.startup_name }}</p>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <h6>Target Audience</h6>
+
+                    <p>{{ analysis.target_audience }}</p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <h6>Business Model</h6>
+
+                    <p>{{ analysis.business_model }}</p>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <h6>Generated On</h6>
+
+                    <p>
+
+                        {{ analysis.created_at.strftime("%d %B %Y %I:%M %p") }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- Score Cards -->
+    <!-- ========================= -->
+
+    <div class="row mb-5">
+
+        <div class="col-md-3">
+
+            <div class="card text-center shadow">
+
+                <div class="card-body">
+
+                    <h6>Viability</h6>
+
+                    <h2 class="text-primary">
+
+                        ⭐
+
+                    </h2>
+
+                    <small>
+
+                        AI Score
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card text-center shadow">
+
+                <div class="card-body">
+
+                    <h6>Innovation</h6>
+
+                    <h2 class="text-success">
+
+                        💡
+
+                    </h2>
+
+                    <small>
+
+                        AI Score
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card text-center shadow">
+
+                <div class="card-body">
+
+                    <h6>Market</h6>
+
+                    <h2 class="text-warning">
+
+                        📈
+
+                    </h2>
+
+                    <small>
+
+                        AI Score
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card text-center shadow">
+
+                <div class="card-body">
+
+                    <h6>Execution</h6>
+
+                    <h2 class="text-danger">
+
+                        🚀
+
+                    </h2>
+
+                    <small>
+
+                        AI Score
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- AI Report -->
+    <!-- ========================= -->
+
+    <div class="card shadow-lg">
+
+        <div class="card-header bg-success text-white">
+
+            <h4>
+
+                🤖 AI Generated Report
+
+            </h4>
+
+        </div>
+
+        <div class="card-body analysis-result">
+
+            {{ formatted_report|safe }}
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- Buttons -->
+    <!-- ========================= -->
+
+    <div class="text-center mt-5">
+
+        <button
+            onclick="window.print()"
+            class="btn btn-success btn-lg">
+
+            🖨 Print Report
+
+        </button>
+
+        <a href="{{ url_for('home.validate') }}"
+           class="btn btn-primary btn-lg">
+
+            🚀 Analyze Another Startup
+
+        </a>
+
+        <a href="{{ url_for('history.history') }}"
+           class="btn btn-outline-dark btn-lg">
+
+            📚 History
+
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,388 @@
+{% extends "base.html" %}
+
+{% block title %}
+LaunchPad AI | Home
+{% endblock %}
+
+{% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1 class="display-4 fw-bold">
+
+🚀 LaunchPad AI
+
+</h1>
+
+<p class="lead mt-4">
+
+LaunchPad AI is an intelligent startup validation platform powered by
+Google Gemini AI. Analyze startup ideas, receive SWOT reports,
+market insights, competitor analysis, and business growth
+recommendations in seconds.
+
+</p>
+
+<div class="mt-4">
+
+<a href="{{ url_for('home.validate') }}"
+class="btn btn-light btn-lg me-3">
+
+🚀 Validate Startup
+
+</a>
+
+<a href="{{ url_for('history.history') }}"
+class="btn btn-outline-light btn-lg">
+
+📚 View History
+
+</a>
+
+</div>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<i class="bi bi-rocket-takeoff-fill"
+style="font-size:220px;"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<div class="container">
+
+<div class="row text-center mb-5">
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<h2>AI</h2>
+
+<p>Powered by Google Gemini</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<h2>24/7</h2>
+
+<p>Instant Startup Analysis</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<h2>10+</h2>
+
+<p>Business Metrics Generated</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<h2>100%</h2>
+
+<p>AI Driven Insights</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= FEATURES ================= -->
+
+<div class="container">
+
+<h2 class="text-center fw-bold mb-5">
+
+Why Choose LaunchPad AI?
+
+</h2>
+
+<div class="row g-4">
+
+<div class="col-lg-3">
+
+<div class="card h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-speedometer2 display-4 text-primary"></i>
+
+<h4 class="mt-3">
+
+Startup Validation
+
+</h4>
+
+<p>
+
+Analyze startup feasibility and generate
+business viability scores.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-diagram-3 display-4 text-success"></i>
+
+<h4 class="mt-3">
+
+SWOT Analysis
+
+</h4>
+
+<p>
+
+Automatically identify strengths,
+weaknesses, opportunities and threats.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-bar-chart-fill display-4 text-warning"></i>
+
+<h4 class="mt-3">
+
+Market Analysis
+
+</h4>
+
+<p>
+
+Industry trends,
+market demand,
+customer segments
+and competitors.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card h-100">
+
+<div class="card-body text-center">
+
+<i class="bi bi-lightbulb-fill display-4 text-danger"></i>
+
+<h4 class="mt-3">
+
+Growth Strategy
+
+</h4>
+
+<p>
+
+Receive AI-powered recommendations
+to scale your startup.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="py-5">
+
+<div class="container">
+
+<h2 class="text-center fw-bold mb-5">
+
+How LaunchPad AI Works
+
+</h2>
+
+<div class="row text-center">
+
+<div class="col-md-3">
+
+<div class="card p-4">
+
+<h1>1️⃣</h1>
+
+<h5>
+
+Submit Startup Idea
+
+</h5>
+
+<p>
+
+Enter your startup details.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card p-4">
+
+<h1>2️⃣</h1>
+
+<h5>
+
+Gemini AI Analysis
+
+</h5>
+
+<p>
+
+AI processes your startup.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card p-4">
+
+<h1>3️⃣</h1>
+
+<h5>
+
+Generate Report
+
+</h5>
+
+<p>
+
+Receive detailed startup insights.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card p-4">
+
+<h1>4️⃣</h1>
+
+<h5>
+
+Business Growth
+
+</h5>
+
+<p>
+
+Implement AI recommendations.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="py-5 bg-light">
+
+<div class="container text-center">
+
+<h2 class="fw-bold">
+
+Ready to Validate Your Startup?
+
+</h2>
+
+<p class="lead">
+
+Generate professional startup reports using AI.
+
+</p>
+
+<a href="{{ url_for('home.validate') }}"
+class="btn btn-primary btn-lg">
+
+Start Analysis →
+
+</a>
+
+</div>
+
+</section>
+
+{% endblock %}

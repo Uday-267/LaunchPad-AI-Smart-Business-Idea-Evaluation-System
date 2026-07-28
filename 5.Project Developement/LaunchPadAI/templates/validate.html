@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block title %}
+Validate Startup | LaunchPad AI
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row">
+
+        <!-- Left Side -->
+
+        <div class="col-lg-4">
+
+            <div class="card shadow-lg mb-4">
+
+                <div class="card-body">
+
+                    <h2 class="text-primary">
+
+                        🚀 LaunchPad AI
+
+                    </h2>
+
+                    <hr>
+
+                    <p>
+
+                        Enter your startup details and let
+                        <strong>Google Gemini AI</strong>
+                        generate a professional startup analysis.
+
+                    </p>
+
+                    <br>
+
+                    <h5>
+
+                        You'll Receive
+
+                    </h5>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+
+                            ✅ Startup Validation Score
+
+                        </li>
+
+                        <li class="list-group-item">
+
+                            ✅ SWOT Analysis
+
+                        </li>
+
+                        <li class="list-group-item">
+
+                            ✅ Market Analysis
+
+                        </li>
+
+                        <li class="list-group-item">
+
+                            ✅ Competitor Analysis
+
+                        </li>
+
+                        <li class="list-group-item">
+
+                            ✅ Revenue Strategy
+
+                        </li>
+
+                        <li class="list-group-item">
+
+                            ✅ Customer Acquisition
+
+                        </li>
+
+                        <li class="list-group-item">
+
+                            ✅ Growth Roadmap
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="col-lg-8">
+
+            <div class="card shadow-lg">
+
+                <div class="card-header bg-primary text-white">
+
+                    <h3>
+
+                        Startup Submission
+
+                    </h3>
+
+                </div>
+
+                <div class="card-body">
+
+                    {% if error %}
+
+                    <div class="alert alert-danger">
+
+                        {{ error }}
+
+                    </div>
+
+                    {% endif %}
+
+                    <form
+                        action="{{ url_for('home.validate') }}"
+                        method="POST"
+                        id="startupForm">
+
+                        <!-- Startup Name -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+
+                                Startup Name
+
+                            </label>
+
+                            <input
+                                type="text"
+                                name="startup_name"
+                                class="form-control"
+                                value="{{ form.startup_name if form else '' }}"
+                                required>
+
+                        </div>
+
+                        <!-- Startup Idea -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+
+                                Startup Idea
+
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                rows="6"
+                                maxlength="2000"
+                                name="startup_idea"
+                                required>{{ form.startup_idea if form else '' }}</textarea>
+
+                            <small class="text-muted">
+
+                                Minimum 50 characters | Maximum 2000 characters
+
+                            </small>
+
+                        </div>
+
+                        <!-- Target Audience -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+
+                                Target Audience
+
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="target_audience"
+                                value="{{ form.target_audience if form else '' }}"
+                                required>
+
+                        </div>
+
+                        <!-- Business Model -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+
+                                Business Model
+
+                            </label>
+
+                            <select
+                                class="form-select"
+                                name="business_model"
+                                required>
+
+                                <option value="">
+
+                                    Select Business Model
+
+                                </option>
+
+                                <option>SaaS</option>
+
+                                <option>Subscription</option>
+
+                                <option>Marketplace</option>
+
+                                <option>E-Commerce</option>
+
+                                <option>Freemium</option>
+
+                                <option>B2B</option>
+
+                                <option>B2C</option>
+
+                                <option>Advertising</option>
+
+                                <option>Commission Based</option>
+
+                                <option>Others</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Product Features -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+
+                                Key Product Features
+
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                name="product_features"
+                                required>{{ form.product_features if form else '' }}</textarea>
+
+                        </div>
+
+                        <!-- Submit -->
+
+                        <div class="text-center">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-lg px-5">
+
+                                🚀 Analyze Startup
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
