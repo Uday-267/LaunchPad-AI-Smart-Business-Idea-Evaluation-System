@@ -188,7 +188,7 @@ Open the generated HTTPS URL to access the application publicly.
 
 # 👨‍💻 Author
 
-**Ganesh Naik**
+**THIMMANACHERLA UDAY**
 
 ---
 
